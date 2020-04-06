@@ -15,7 +15,7 @@ pipeline {
 	}
    }
 }
-	stage ('Deployment stage')
+	stage ('Deployment stage') {
 	 steps {
 	  withMaven (maven : 'maven_3_5_0') {
 	  sh 'mvn delpoy'
@@ -23,4 +23,4 @@ pipeline {
       }
     }
   }
- }
+}
